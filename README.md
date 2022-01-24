@@ -10,7 +10,7 @@
 > 
 > 推荐系统 百面百搭 地址：https://github.com/km1994/RES-Interview-Notes
 > 
-> 推广搜 军火库【持续更新】:https://mp.weixin.qq.com/s/vjsnTKTDk8j4NTcX7Vu-uw
+> **推广搜 军火库**：https://github.com/km1994/recommendation_advertisement_search 
 > 
 > **关注公众号 【关于NLP那些你不知道的事】 加入 【NLP && 推荐学习群】一起学习！！！**
 
