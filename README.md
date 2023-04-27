@@ -14,13 +14,121 @@
 > 
 > **关注公众号 【关于NLP那些你不知道的事】 加入 【NLP && 推荐学习群】一起学习！！！**
 
-## 一、小白 AI 入门学习
+## 一、项目篇
 
-### 1.1 机器学习入门
+### 1.1 目前业界可以下载到的一些大模型
+
+- chatgpt:
+  - https://openai.com/blog/chatgpt
+  - 体验地址：https://chat.openai.com/
+- GLM-10B/130B 
+  - 介绍：双语（中文和英文）双向稠密模型
+- OPT-2.7B/13B/30B/66B ：
+  - 介绍：Meta开源的预训练语言模型
+  - github: https://github.com/facebookresearch/metaseq
+  - paper: https://arxiv.org/pdf/2205.01068.pdf
+- LLaMA-7B/13B/30B/65B ：
+  - 介绍：Meta开源的基础大语言模型
+  - github: https://github.com/facebookresearch/llama
+  - paper: https://arxiv.org/pdf/2302.13971v1.pdf
+- Alpaca（LLaMA-7B）：
+  - 介绍：斯坦福提出的一个强大的可复现的指令跟随模型，种子任务都是英语，收集的数据也都是英文，因此训练出来的模型未对中文优化
+  - github: https://github.com/tatsu-lab/stanford_alpaca
+  - Chinese-LLaMA-Alpaca github: https://github.com/ymcui/Chinese-LLaMA-Alpaca
+- BELLE（BLOOMZ-7B/LLaMA-7B）：
+  - 介绍：本项目基于 Stanford Alpaca，针对中文做了优化，模型调优仅使用由ChatGPT生产的数据（不包含任何其他数据）
+- ChatGLM-6B ：
+  - 介绍：中英双语的对话语言模型
+  - github: https://github.com/THUDM/ChatGLM-6B/
+- Bloom-7B/13B/176B：
+  - 介绍：可以处理46 种语言，包括法语、汉语、越南语、印度尼西亚语、加泰罗尼亚语、13 种印度语言（如印地语）和 20 种非洲语言。其中，Bloomz系列模型是基于 xP3 数据集微调。 推荐用于英语的提示（prompting）；Bloomz-mt系列模型是基于 xP3mt 数据集微调。推荐用于非英语的提示（prompting）
+  - github: https://huggingface.co/bigscience/bloom
+  - paper: https://arxiv.org/pdf/2211.05100.pdf
+- Vicuna(7B/13B)：
+  - 介绍：由UC Berkeley、CMU、Stanford和 UC San Diego的研究人员创建的 Vicuna-13B，通过在 ShareGPT 收集的用户共享对话数据中微调 LLaMA 获得。其中，使用 GPT-4 进行评估，发现 Vicuna-13B 的性能在超过90%的情况下实现了与ChatGPT和Bard相匹敌的能力；同时，在 90% 情况下都优于 LLaMA 和 Alpaca 等其他模型。而训练 Vicuna-13B 的费用约为 300 美元。不仅如此，它还提供了一个用于训练、服务和评估基于大语言模型的聊天机器人的开放平台：FastChat。
+- Baize：
+  - 介绍：白泽是在LLaMA上训练的。目前包括四种英语模型：白泽-7B、13B 、 30B（通用对话模型）以及一个垂直领域的白泽-医疗模型，供研究 / 非商业用途使用，并计划在未来发布中文的白泽模型。白泽的数据处理、训练模型、Demo 等全部代码已经开源。
+- LLMZoo：
+  - 介绍：来自香港中文大学和深圳市大数据研究院团队推出的一系列大模型，如：Phoenix（凤凰） 和 Chimera等 -MOSS：由复旦 NLP 团队推出的 MOSS 大语言模型。
+- 小羊驼 FastChat
+  - github: https://github.com/lm-sys/FastChat
+- MiniGPT-4  
+  - github: https://github.com/Vision-CAIR/MiniGPT-4
+
+### 1.2 NLP 项目军火库学习
+
+- 【知识图谱构建 DeepKg】https://github.com/powerycy/DeepKg
+  - 介绍：本项目致力于知识图谱的构建，目前正一点一点搭建其方法，也希望能帮助更多的人，
+
+### 1.3 推荐系统 项目军火库学习
+
+- 【fun-rec】https://github.com/datawhalechina/fun-rec
+  - 介绍：主要是针对具有机器学习基础并想找推荐算法岗位的同学，教程由推荐算法基础、推荐算法入门赛、新闻推荐项目及推荐算法面经组成，形成了一个完整的从基础到实战再到面试的闭环。
+- 【RecSys】https://github.com/qcymkxyc/RecSys
+  - 介绍：项亮的《推荐系统实践》的代码实现
+
+### 1.4 搜索引擎 项目军火库学习
+
+- 【搜索引擎项目 开源】https://github.com/zuo369301826/Search_Project
+  - 项目介绍：模拟百度搜索的方式实现站内搜索引擎，整个项目分为两大部分，HTTP服务器和搜索服务器：HTTP服务器来获取用户的请求，并分析请求以便获取我们所需要的特定信息，之后将信息传给搜索服务器；搜索服务器会根据这些信息进行处理并检索数据，将结果反馈给HTTP服务器，HTTP服务器收到索引结果将其打印到页面上
+  - 项目特点：1. 使用到Google提供的 protobuf, gflag, glog 等开源框架来完成开发；2. 搜索服务器利用RPC协议，基于百度开源的高性能RPC框架 sofa-pbrpc 实现；3.搜索原理是以正排索引加倒排索引相结合的方式进行检索；4. HTTP服务器使用epoll模型，提高了并发的响应速度；5. HTTP服务器以CGI的方式调用搜索客户端完成检索功能
+- 【Elastic】https://www.elastic.co/cn/
+  - 介绍：Elasticsearch 是一个分布式、RESTful 风格的搜索和数据分析引擎，能够解决不断涌现出的各种用例。 作为 Elastic Stack 的核心，它集中存储您的数据，帮助您发现意料之中以及意料之外的情况。
+- 【Nutch】http://nutch.sourceforge.net/docs/zh/about.html
+  - 介绍：Nutch 是一个刚刚诞生开放源代码(open-source)的web搜索引擎。在它的主页有中文详细的说明。
+- 【Lucene】http://jakarta.apache.org/lucene/docs/index.html
+  - 介绍：Apache Lucene是一个开放源程序的搜寻器引擎，利用它可以轻易地为Java软件加入全文搜寻功能。Lucene的最主要工作是替文件的每一个字作索引，索引让搜寻的效率比传统的逐字比较大大提高，Lucen提供一组解读，过滤，分析文件，编排和使用索引的API，它的强大之处除了高效和简单外，是最重要的是使使用者可以随时应自已需要自订其功能。
+- 【Egothor】http://www.egothor.org/
+  - 介绍：Egothor是一个用Java编写的开源而高效的全文本搜索引擎。借助Java的跨平台特性，Egothor能应用于任何环境的应用，既可配置为单独的搜索引擎，又能用于你的应用作为全文检索之用。
+- 【Oxyus】http://oxyus.sourceforge.net/
+  - 介绍：是一个纯java写的web搜索引擎。
+- 【BDDBot】http://www.twmacinta.com/bddbot/
+  - 介绍：BDDBot是一个简单的易于理解和使用的搜索引擎。它目前在一个文本文件(urls.txt)列出的URL中爬行，将结果保存在一个数据库中。它也支持一个简单的Web服务器，这个服务器接受来自浏览器的查询并返回响应结果。它可以方便地集成到你的Web站点中。
+
+### 1.5 计算广告 项目军火库学习
+
+- 【美团DSP广告策略实践】https://tech.meituan.com/2017/05/05/mt-dsp.html
+- 【互联网广告与计算广告学入门】http://web.stanford.edu/class/msande239/
+
+## 二、Ai 神器
+
+- ChatGPT Ai 神器
+  - 【Ai神器】对话式AI——ChatGPT https://999.weny66.cn/chat?bd_vid=11997231054327469370
+  - 【AI神器】GPT-4 在线体验网站 chatmindai.cn 
+  - 【AI神器】ChatGPT3.5免登陆，国内可用 https://chat23.yqcloud.top/
+  - Forefront Chat chat.forefront.ai 
+  - Poe poe.com/GPT-4   
+- 3D Ai 神器
+  - Masterpiece Studio: https://xiaobot.net/p/SuperIndividual
+  - Masterpiece Studio：https://masterpiecestudio.com
+  - G3DAI {Jedi}：https://g3d.ai
+  - Ponzu：https://www.ponzu.gg
+  - PrometheanAI：https://www.prometheanai.com
+  - Leonardo.Ai：https://leonardo.ai
+- Art Ai 神器
+  - Dream Up (Deviant Art)：https://www.dreamup.com
+  - NightCafe Studio：https://creator.nightcafe.studio
+  - Midjourney：https://www.midjourney.com/home/
+  - Artbreeder：https://www.artbreeder.com
+  - Wombo：https://www.wombo.art
+- Audio Editing Ai 神器
+  - Podcastle : Editing	https://podcastle.ai
+  - Cleanvoice : Audio Editing	https://cleanvoice.ai
+- Code Assistant Ai 神器
+  - CodeSquire		https://codesquire.ai
+  - Buildt	Code Assistant	https://www.buildt.ai
+  - Hey, GitHub!	Code Assistant	https://githubnext.com/projects/hey-github
+- 持续更新
+
+
+
+## 三、小白 AI 入门学习
+
+### 3.1 机器学习入门
 
 - 【吴恩达机器学习系列课程】 https://www.bilibili.com/video/BV164411b7dx?from=search&seid=18138466354258018449&spm_id_from=333.337.0.0
 
-### 1.2 NLP 入门
+### 3.2 NLP 入门
 
 - 【2021吴恩达深度学习-NLP序列模型】https://www.bilibili.com/video/BV1Co4y1279R?from=search&seid=17563746002586971760&spm_id_from=333.337.0.0
 - 【知识图谱入门】
@@ -30,7 +138,7 @@
   - [图谱讲义 | 第一讲-第4节-知识图谱的技术内涵](https://mp.weixin.qq.com/s?__biz=MzAxMTU5Njg4NQ==&mid=2247490691&idx=2&sn=69f78ad259aa0255f738a1aabb025b06&chksm=9bbff9b9acc870af1bc9fd066e8008f476f50a23e979037b5efc34ad806ccce655b1fd0cba4c&scene=21#wechat_redirect)
   - [图谱讲义 | 第二讲-第1节-什么是知识表示](http://mp.weixin.qq.com/s?__biz=MzAxMTU5Njg4NQ==&mid=2247490820&idx=2&sn=02ac83e07bc2a8e94c605f7507372e64&chksm=9bbff83eacc87128f7241c17fe9950904e8f65da86b17a662454ce31d6263a344549cab1f316&scene=21#wechat_redirect)
 
-### 1.3 计算广告 入门
+### 3.3 计算广告 入门
 
 - 【互联网广告与计算广告学入门】http://web.stanford.edu/class/msande239/
   - Lecture 1: Introduction, Supplementary notes
@@ -73,7 +181,7 @@
   - Contextual Advertising II
   - Behavioral Targeting (BT)
 
-## 二、推广搜论文学习笔记
+## 四、推广搜论文学习笔记
 
 - 【[NLP 学习笔记](https://github.com/km1994/nlp_paper_study)】
   - 【Transformer】
@@ -158,8 +266,7 @@
   - [【关于 PLM for Web-scale Retrieval in Baidu Search 】 那些你不知道的事](https://mp.weixin.qq.com/s/BjKp-9kgInPIY7E0Jn7noA)
   - [EMNLP 2021 | RocketQAv2：稠密段落检索和段落精排的联合训练方法](https://mp.weixin.qq.com/s/y6g7h3dCVYmhWs3wyplxrg)
 
-
-## 三、推广搜 面经篇
+## 五、推广搜 面经篇
 
 - 【 [NLP百面百搭](https://github.com/km1994/NLP-Interview-Notes)】
   - 【机器学习】
@@ -197,9 +304,9 @@
 - 【[推荐系统百面百搭](https://github.com/km1994/RES-Interview-Notes)】 
 - 待续
 
-## 四、框架篇
+## 六、框架篇
 
-### 4.1 Pytorch 学习
+### 6.1 Pytorch 学习
 
 - 【PyTorch英文版官方手册】https://pytorch.org/tutorials/
   - 介绍：PyTorch英文版官方手册：https://pytorch.org/tutorials/。对于英文比较好的同学，非常推荐该PyTorch官方文档，一步步带你从入门到精通。该文档详细的介绍了从基础知识到如何使用PyTorch构建深层神经网络，以及PyTorch语法和一些高质量的案例。
@@ -215,7 +322,7 @@
 - 【ark-nlp NLP 工具库】https://github.com/xiangking/ark-nlp
   - 介绍：王翔大佬开源的 军火库，主要是收集和复现学术与工作中常用的NLP模型
 
-### 4.2 tensorflow 学习
+### 6.2 tensorflow 学习
 
 - 【TensorFlow 官网】https://www.tensorflow.org/tutorials
   - 介绍：官网教程绝对是最香的学习资料
@@ -230,12 +337,17 @@
 - 【BERT和ALBERT在下游任务中的应用】https://github.com/km1994/bert-for-task
   - 介绍：Bert 在 NLP 任务中的 实现
 
-### 4.3 keras 学习
+### 6.3 keras 学习
 
 - 【bert4keras】https://github.com/bojone/bert4keras
   - 介绍：苏神开源的军火库，重新实现的keras版的transformer模型库，致力于用尽可能清爽的代码来实现结合transformer和keras。
 
-## 五、竞赛篇
+### 6.4 分布式训练框架 学习
+
+- 第一类：深度学习框架自带的分布式训练功能。如：TensorFlow、PyTorch、MindSpore、Oneflow、PaddlePaddle等。
+- 第二类：基于现有的深度学习框架（如：PyTorch、Flax）进行扩展和优化，从而进行分布式训练。如：Megatron-LM（张量并行）、DeepSpeed（Zero-DP）、Colossal-AI（高维模型并行，如2D、2.5D、3D）、Alpa（自动并行）等
+
+## 七、竞赛篇
 
 ### 5.1 国内竞赛
 
@@ -249,8 +361,6 @@
 
 - 【麻婆豆腐AI】
   - 介绍：会介绍 最近可以参加的一些赛事
-- 【ChallengeHub】
-  - 介绍：分享一些 ML/CV/NLP 数据挖掘竞赛经验 和 baseline，竞赛小白强烈推荐
 
 ### 5.3 NLP 竞赛军火库
 
@@ -274,14 +384,14 @@
   - 任务类型：文本分类
   - 测评链接：http://data.sd.gov.cn/cmpt/cmptDetail.html?id=67
 
-## 六、语料篇
+## 八、语料篇
 
-### 6.1 NLP 语料
+### 8.1 NLP 语料
 
 - 【nlp_chinese_corpus 】https://github.com/brightmart/nlp_chinese_corpus
   - 介绍：大规模中文自然语言处理语料 Large Scale Chinese Corpus for NLP
 
-### 6.2 推荐系统 语料
+### 8.2 推荐系统 语料
 
 - 【MovieLens】https://grouplens.org/datasets/movielens/
   - 介绍：MovieLens数据集由GroupLens研究组在 University of Minnesota — 明尼苏达大学（与我们使用数据集无关）中组织的。 MovieLens是电影评分的集合，有各种大小。 数据集命名为1M，10M和20M，是因为它们包含1,10和20万个评分。 最大的数据集使用约14万用户的数据，并覆盖27,000部电影。 除了评分之外，MovieLens数据还包含类似“Western”的流派信息和用户应用的标签，如“over the top”和“Arnold Schwarzenegger”。 这些流派标记和标签在构建内容向量方面是有用的。内容向量对项目的信息进行编码，例如颜色，形状，流派或真正的任何其他属性 - 可以是用于基于内容的推荐算法的任何形式。
@@ -293,48 +403,13 @@
   - 介绍：该数据集包含2006年4月4日导出的135,359位LibimSeTi用户对168,791个配置文件的17,359,346个匿名评分。
 - 其他：https://zhuanlan.zhihu.com/p/258566760
 
-### 6.3 标注工具篇
+### 8.3 标注工具篇
 
 - [你还在为找不到实体关系标注器而烦恼么？](https://mp.weixin.qq.com/s/1HVvA09NLGqrnJhjHSDzIQ)
+- [https://labelstud.io/](https://labelstud.io/)
+- [doccano](https://github.com/doccano/doccano)
 
-## 七、项目篇
-
-### 7.1 NLP 项目军火库学习
-
-- 【知识图谱构建 DeepKg】https://github.com/powerycy/DeepKg
-  - 介绍：本项目致力于知识图谱的构建，目前正一点一点搭建其方法，也希望能帮助更多的人，
-
-### 7.2 推荐系统 项目军火库学习
-
-- 【fun-rec】https://github.com/datawhalechina/fun-rec
-  - 介绍：主要是针对具有机器学习基础并想找推荐算法岗位的同学，教程由推荐算法基础、推荐算法入门赛、新闻推荐项目及推荐算法面经组成，形成了一个完整的从基础到实战再到面试的闭环。
-- 【RecSys】https://github.com/qcymkxyc/RecSys
-  - 介绍：项亮的《推荐系统实践》的代码实现
-
-### 7.3 搜索引擎 项目军火库学习
-
-- 【搜索引擎项目 开源】https://github.com/zuo369301826/Search_Project
-  - 项目介绍：模拟百度搜索的方式实现站内搜索引擎，整个项目分为两大部分，HTTP服务器和搜索服务器：HTTP服务器来获取用户的请求，并分析请求以便获取我们所需要的特定信息，之后将信息传给搜索服务器；搜索服务器会根据这些信息进行处理并检索数据，将结果反馈给HTTP服务器，HTTP服务器收到索引结果将其打印到页面上
-  - 项目特点：1. 使用到Google提供的 protobuf, gflag, glog 等开源框架来完成开发；2. 搜索服务器利用RPC协议，基于百度开源的高性能RPC框架 sofa-pbrpc 实现；3.搜索原理是以正排索引加倒排索引相结合的方式进行检索；4. HTTP服务器使用epoll模型，提高了并发的响应速度；5. HTTP服务器以CGI的方式调用搜索客户端完成检索功能
-- 【Elastic】https://www.elastic.co/cn/
-  - 介绍：Elasticsearch 是一个分布式、RESTful 风格的搜索和数据分析引擎，能够解决不断涌现出的各种用例。 作为 Elastic Stack 的核心，它集中存储您的数据，帮助您发现意料之中以及意料之外的情况。
-- 【Nutch】http://nutch.sourceforge.net/docs/zh/about.html
-  - 介绍：Nutch 是一个刚刚诞生开放源代码(open-source)的web搜索引擎。在它的主页有中文详细的说明。
-- 【Lucene】http://jakarta.apache.org/lucene/docs/index.html
-  - 介绍：Apache Lucene是一个开放源程序的搜寻器引擎，利用它可以轻易地为Java软件加入全文搜寻功能。Lucene的最主要工作是替文件的每一个字作索引，索引让搜寻的效率比传统的逐字比较大大提高，Lucen提供一组解读，过滤，分析文件，编排和使用索引的API，它的强大之处除了高效和简单外，是最重要的是使使用者可以随时应自已需要自订其功能。
-- 【Egothor】http://www.egothor.org/
-  - 介绍：Egothor是一个用Java编写的开源而高效的全文本搜索引擎。借助Java的跨平台特性，Egothor能应用于任何环境的应用，既可配置为单独的搜索引擎，又能用于你的应用作为全文检索之用。
-- 【Oxyus】http://oxyus.sourceforge.net/
-  - 介绍：是一个纯java写的web搜索引擎。
-- 【BDDBot】http://www.twmacinta.com/bddbot/
-  - 介绍：BDDBot是一个简单的易于理解和使用的搜索引擎。它目前在一个文本文件(urls.txt)列出的URL中爬行，将结果保存在一个数据库中。它也支持一个简单的Web服务器，这个服务器接受来自浏览器的查询并返回响应结果。它可以方便地集成到你的Web站点中。
-
-### 7.4 计算广告 项目军火库学习
-
-- 【美团DSP广告策略实践】https://tech.meituan.com/2017/05/05/mt-dsp.html
-- 【互联网广告与计算广告学入门】http://web.stanford.edu/class/msande239/
-
-## 八、公众号篇
+## 九、公众号篇
 
 - 关于NLP那些你不知道的事
   - 介绍：关于NLP那些你不知道的事
@@ -377,7 +452,7 @@
 - 夕小瑶的卖萌屋
   - 介绍：自然语言处理、计算机视觉、信息检索、推荐系统、机器学习
 
-## 九、学习笔记
+## 十、学习笔记
 
 - 科学空间：
   - 地址：https://spaces.ac.cn/
@@ -394,7 +469,10 @@
   - 地址：https://www.zhihu.com/people/yuan-chao-yi-83
 
 
-## 十、部署笔记
+## 十一、部署笔记
 
 - [Bert与TensorRT部署手册，享受丝滑的顺畅](https://mp.weixin.qq.com/s/jW-I-uRLOtQtvVX5qyHoHg)
 
+## 参考
+
+1. [关于大模型实践的一些总结](https://zhuanlan.zhihu.com/p/616929229)
