@@ -55,19 +55,32 @@
 - MiniGPT-4  
   - github: https://github.com/Vision-CAIR/MiniGPT-4
 
-### 1.2 NLP 项目军火库学习
+### 1.2【LLMs 入门实战序列连载】
+
+清华大学开源中文版ChatGLM-6B模型学习与实战
+【ChatGLM-6B入门-二】清华大学开源中文版ChatGLM-6B模型微调实战
+【ChatGLM-6B入门-三】ChatGLM 特定任务微调实战
+【ChatGLM-6B入门-四】ChatGLM + LoRA 进行finetune
+【LLMs 入门实战 —— 五 】Stanford Alpaca 7B 模型学习与实战
+【LLMs学习】关于大模型实践的一些总结
+ChatGLM-6B 小编填坑记
+【LLMs 入门实战 —— 六 】Chinese-LLaMA-Alpaca 模型学习与实战
+【LLMs 入门实战 —— 七 】小羊驼 FastChat 模型学习与实战
+【LLMs 入门实战 —— 八 】MiniGPT-4 模型学习与实战
+
+### 1.3 NLP 项目军火库学习
 
 - 【知识图谱构建 DeepKg】https://github.com/powerycy/DeepKg
   - 介绍：本项目致力于知识图谱的构建，目前正一点一点搭建其方法，也希望能帮助更多的人，
 
-### 1.3 推荐系统 项目军火库学习
+### 1.4 推荐系统 项目军火库学习
 
 - 【fun-rec】https://github.com/datawhalechina/fun-rec
   - 介绍：主要是针对具有机器学习基础并想找推荐算法岗位的同学，教程由推荐算法基础、推荐算法入门赛、新闻推荐项目及推荐算法面经组成，形成了一个完整的从基础到实战再到面试的闭环。
 - 【RecSys】https://github.com/qcymkxyc/RecSys
   - 介绍：项亮的《推荐系统实践》的代码实现
 
-### 1.4 搜索引擎 项目军火库学习
+### 1.5 搜索引擎 项目军火库学习
 
 - 【搜索引擎项目 开源】https://github.com/zuo369301826/Search_Project
   - 项目介绍：模拟百度搜索的方式实现站内搜索引擎，整个项目分为两大部分，HTTP服务器和搜索服务器：HTTP服务器来获取用户的请求，并分析请求以便获取我们所需要的特定信息，之后将信息传给搜索服务器；搜索服务器会根据这些信息进行处理并检索数据，将结果反馈给HTTP服务器，HTTP服务器收到索引结果将其打印到页面上
@@ -85,7 +98,7 @@
 - 【BDDBot】http://www.twmacinta.com/bddbot/
   - 介绍：BDDBot是一个简单的易于理解和使用的搜索引擎。它目前在一个文本文件(urls.txt)列出的URL中爬行，将结果保存在一个数据库中。它也支持一个简单的Web服务器，这个服务器接受来自浏览器的查询并返回响应结果。它可以方便地集成到你的Web站点中。
 
-### 1.5 计算广告 项目军火库学习
+### 1.6 计算广告 项目军火库学习
 
 - 【美团DSP广告策略实践】https://tech.meituan.com/2017/05/05/mt-dsp.html
 - 【互联网广告与计算广告学入门】http://web.stanford.edu/class/msande239/
